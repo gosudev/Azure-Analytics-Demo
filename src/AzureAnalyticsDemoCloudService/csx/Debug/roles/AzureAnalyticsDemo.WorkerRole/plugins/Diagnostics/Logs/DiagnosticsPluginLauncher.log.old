@@ -1,0 +1,15 @@
+DiagnosticsPluginLauncher.exe Information: 0 : [2018-01-26 13:46:02] Emulator config file set to E:\git\RB\AzureAnalyticsDemo\src\AzureAnalyticsDemoCloudService\csx\Debug\roles\AzureAnalyticsDemo.WorkerRole\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [2018-01-26 13:46:02] DiagnosticsStoreRootPath set to: C:\Users\pluksza\AppData\Local\dftmp\Resources\54d2de8d-ef80-411c-85af-fd6ba24b8bf1
+DiagnosticsPluginLauncher.exe Information: 0 : [2018-01-26 13:46:02] Loading config file: E:\git\RB\AzureAnalyticsDemo\src\AzureAnalyticsDemoCloudService\csx\Debug\roles\AzureAnalyticsDemo.WorkerRole\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [2018-01-26 13:46:02] Config file to read: E:\git\RB\AzureAnalyticsDemo\src\AzureAnalyticsDemoCloudService\csx\Debug\roles\AzureAnalyticsDemo.WorkerRole\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [2018-01-26 13:46:02] Checking VM Type
+DiagnosticsPluginLauncher.exe Information: 0 : [2018-01-26 13:46:02] Emulator config file set to E:\git\RB\AzureAnalyticsDemo\src\AzureAnalyticsDemoCloudService\csx\Debug\roles\AzureAnalyticsDemo.WorkerRole\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [2018-01-26 13:46:02] Extension set to Emulator Mode
+DiagnosticsPluginLauncher.exe Information: 0 : [2018-01-26 13:46:02] Reading XML configuration file
+DiagnosticsPluginLauncher.exe Information: 0 : [2018-01-26 13:46:02] Bypassing private config decryption
+DiagnosticsPluginLauncher.exe Information: 0 : [2018-01-26 13:46:02] Stopping the running plugin, if any
+DiagnosticsPluginLauncher.exe Information: 0 : [2018-01-26 13:46:03] No DiagnosticsPlugin is running.
+DiagnosticsPluginLauncher.exe Information: 0 : [2018-01-26 13:46:03] Killing any DiagnosticsPlugin that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [2018-01-26 13:46:03] Killing any MonAgentHost that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [2018-01-26 13:46:03] Diagnostics plugin stopped successfully
+DiagnosticsPluginLauncher.exe Information: 0 : [2018-01-26 13:46:03] Resetting DiagnosticPlugin

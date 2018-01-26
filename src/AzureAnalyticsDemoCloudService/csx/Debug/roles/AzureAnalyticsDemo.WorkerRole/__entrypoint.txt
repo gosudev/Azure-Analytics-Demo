@@ -1,0 +1,1 @@
+AzureAnalyticsDemo.WorkerRole.dll

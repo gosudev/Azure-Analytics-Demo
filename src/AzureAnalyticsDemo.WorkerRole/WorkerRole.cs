@@ -6,10 +6,12 @@ using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 using AzureAnalyticsDemo.SharepointClient;
+using Microsoft.Azure;
 using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.Diagnostics;
 using Microsoft.WindowsAzure.ServiceRuntime;
 using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Queue;
 
 namespace AzureAnalyticsDemo.WorkerRole
 {
@@ -70,8 +72,31 @@ namespace AzureAnalyticsDemo.WorkerRole
 
                 Trace.TraceInformation($"Getting {complaints.Count} complaints");
 
+                EnQueueMessage();
+
                 await Task.Delay(1000);
             }
+        }
+
+        private void EnQueueMessage()
+        {
+            // Retrieve storage account from connection string.
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(
+                CloudConfigurationManager.GetSetting("StorageConnectionString"));
+
+            // Create the queue client.
+            CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();
+
+            // Retrieve a reference to a queue.
+            CloudQueue queue = queueClient.GetQueueReference("myqueue");
+
+            // Create the queue if it doesn't already exist.
+            queue.CreateIfNotExists();
+
+            // Create a message and add it to the queue.
+            CloudQueueMessage message = new CloudQueueMessage($"Hello, World {DateTime.Now}");
+
+            queue.AddMessage(message);
         }
     }
 }

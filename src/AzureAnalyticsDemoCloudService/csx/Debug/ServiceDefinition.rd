@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AzureAnalyticsDemoCloudService" generation="1" functional="0" release="0" Id="37ac8730-6ccc-422d-8dd0-7aacde693378" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AzureAnalyticsDemoCloudService" generation="1" functional="0" release="0" Id="e04113e8-72f5-4090-8c9c-49171cd55cb3" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="AzureAnalyticsDemoCloudServiceGroup" generation="1" functional="0" release="0">
       <settings>

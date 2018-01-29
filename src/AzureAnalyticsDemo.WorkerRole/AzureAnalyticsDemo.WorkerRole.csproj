@@ -79,6 +79,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AzureAnalyticsDemo.Contracts\AzureAnalyticsDemo.Contracts.csproj">
+      <Project>{6c2c2dab-9b8e-4a25-8253-e0b311065c1c}</Project>
+      <Name>AzureAnalyticsDemo.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AzureAnalyticsDemo.SharepointClient\AzureAnalyticsDemo.SharePointClient.csproj">
       <Project>{728ba32e-243e-43b4-8a30-bc804e0b3788}</Project>
       <Name>AzureAnalyticsDemo.SharePointClient</Name>

@@ -1,17 +1,16 @@
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
+using AzureAnalyticsDemo.Contracts.Model;
 using AzureAnalyticsDemo.SharepointClient;
 using Microsoft.Azure;
-using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.Diagnostics;
 using Microsoft.WindowsAzure.ServiceRuntime;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Queue;
+using Newtonsoft.Json;
 
 namespace AzureAnalyticsDemo.WorkerRole
 {
@@ -74,7 +73,7 @@ namespace AzureAnalyticsDemo.WorkerRole
 
                 EnQueueMessage();
 
-                await Task.Delay(1000);
+                await Task.Delay(5000);
             }
         }
 
@@ -93,8 +92,18 @@ namespace AzureAnalyticsDemo.WorkerRole
             // Create the queue if it doesn't already exist.
             queue.CreateIfNotExists();
 
-            // Create a message and add it to the queue.
-            CloudQueueMessage message = new CloudQueueMessage($"Hello, World {DateTime.Now}");
+            long number = DateTime.Now.Ticks;
+            var complaint = new Complaint()
+            {
+                Company = $"{number} Company",
+                SentDate = DateTime.Now,
+                Title = $"{number} Title",
+                WhatHappend = $"{number} Happend"
+            };
+
+            CloudQueueMessage message = new CloudQueueMessage(JsonConvert.SerializeObject(complaint));
+
+            //CloudQueueMessage message = new CloudQueueMessage($"Hello, World {DateTime.Now}");
 
             queue.AddMessage(message);
         }

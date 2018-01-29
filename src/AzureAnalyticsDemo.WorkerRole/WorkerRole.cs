@@ -88,7 +88,7 @@ namespace AzureAnalyticsDemo.WorkerRole
             CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();
 
             // Retrieve a reference to a queue.
-            CloudQueue queue = queueClient.GetQueueReference("myqueue");
+            CloudQueue queue = queueClient.GetQueueReference("complaintqueue");
 
             // Create the queue if it doesn't already exist.
             queue.CreateIfNotExists();

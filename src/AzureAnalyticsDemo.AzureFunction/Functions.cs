@@ -1,6 +1,5 @@
 using System;
 using AzureAnalyticsDemo.AzureFunction.Core;
-using AzureAnalyticsDemo.Contracts.Model;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host;
 using Newtonsoft.Json;
@@ -9,12 +8,10 @@ namespace AzureAnalyticsDemo.AzureFunction
 {
     public static class Functions
     {
-        [FunctionName("Functions")]
-        public static void Run([QueueTrigger("complaintqueue", Connection = "Development")]string myQueueItem, TraceWriter log)
+        [FunctionName("ComplaintProcessor")]
+        public static void Run([QueueTrigger("complaintqueue", Connection = "QueueStorage")]string myQueueItem, TraceWriter log)
         {
             log.Info($"C# Queue trigger function processed: {myQueueItem}");
-
-            //deserialize message to complaint object
 
             var connectionString = System.Configuration.ConfigurationManager
                 .ConnectionStrings["SQLConnectionString"].ConnectionString;

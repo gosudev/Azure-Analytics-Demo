@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureAnalyticsDemo.WorkerRo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureAnalyticsDemo.SharePointClient", "AzureAnalyticsDemo.SharepointClient\AzureAnalyticsDemo.SharePointClient.csproj", "{728BA32E-243E-43B4-8A30-BC804E0B3788}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureAnalyticsDemo.AzureFunction", "AzureAnalyticsDemo.AzureFunction\AzureAnalyticsDemo.AzureFunction.csproj", "{8ACDCEC4-CE7D-4AF8-859B-420E9C981AD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureAnalyticsDemo.AzureFunction", "AzureAnalyticsDemo.AzureFunction\AzureAnalyticsDemo.AzureFunction.csproj", "{8ACDCEC4-CE7D-4AF8-859B-420E9C981AD5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureAnalyticsDemo.Contracts", "AzureAnalyticsDemo.Contracts\AzureAnalyticsDemo.Contracts.csproj", "{6C2C2DAB-9B8E-4A25-8253-E0B311065C1C}"
 EndProject

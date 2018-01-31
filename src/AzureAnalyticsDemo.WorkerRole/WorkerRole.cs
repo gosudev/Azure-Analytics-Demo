@@ -1,6 +1,5 @@
 using System;
 using System.Diagnostics;
-using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
@@ -64,7 +63,6 @@ namespace AzureAnalyticsDemo.WorkerRole
         {
             SharePointClient sharepointClient = new SharePointClient();
 
-            // TODO: Replace the following with your own logic.
             while (!cancellationToken.IsCancellationRequested)
             {
                 var complaints = await sharepointClient.GetComplaints();
